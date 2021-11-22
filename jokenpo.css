@@ -1,0 +1,115 @@
+@media screen and (min-width: 600px) {
+    .container {
+        width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+body {
+  background: #F0F0F3;
+}
+
+h1 {
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 52px;
+    width: 196px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+h2 {
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 23,44px;
+    color: #888888;
+    margin: 19px auto;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+span {
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    vertical-align: text-bottom;
+    margin-right: 29px;
+}
+
+hr {
+    margin: 0 29px 0 29px;
+    height: 5px;
+    background-color: #EEEEEE;
+    box-shadow: inset -1.40127px -1.40127px 1.40127px rgba(255, 255, 255, 0.55), inset 1.40127px 1.40127px 1.40127px rgba(136, 160, 183, 0.15);
+    border-radius: 28.03px;
+    border: none;
+  }
+
+.play-options {
+    display: flex;
+    background: #EEEEEE;
+    box-shadow: -5.9893px -5.9893px 17.9679px rgba(255, 255, 255, 0.5), 5.9893px 5.9893px 17.9679px rgba(136, 160, 183, 0.25);
+    border-radius: 23.957218170166016px;
+    margin: 0 29px 0 32px;
+    justify-content: space-between;
+    padding: 11px 22px 10px;
+} 
+
+.play-options img {
+    display: block;
+    height: 45px;
+}
+
+.play-options div {
+    height: 60px;
+    width: 60px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected {
+    height: 60px;
+    width: 60px;
+    border-radius: 17.967914581298828px;
+    background: #EEEEEE;
+    box-shadow: inset -5.9893px -5.9893px 17.9679px rgba(255, 255, 255, 0.5), inset 5.9893px 5.9893px 17.9679px rgba(136, 160, 183, 0.25);
+}
+
+.box {
+    width: calc(100% - 60px);
+    display: block;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 201.12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    height: 201.12px;
+    background: #F0F0F3;
+    box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
+    border-radius: 16px;
+    border: none;
+    box-sizing: border-box;
+    margin: 26px 30px;
+}
+
+#vs {
+    margin: 17px auto;
+    text-align: center;
+}
+
+    
