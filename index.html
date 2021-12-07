@@ -13,6 +13,9 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="jokenpo.css">
+    <script src="https://kit.fontawesome.com/219fd49ac9.js" crossorigin="anonymous"></script>
+
+    <script defer src="jokenpo.js"></script>
 	</head>
 
 	<body>
@@ -26,35 +29,35 @@
 
 			<main>
 				<h2>Player 1</h2>
-        <div class="play-options">
-          <div>
-            <img src="./imagens/pedra.png">
-          </div>
+        <div class="play-options player1">
+          <button onclick="select()">
+            <i class="fas fa-hand-rock fa-3x"></i>
+          </button>
 
-          <div class="selected">
-            <img src="./imagens/papel.png">
-          </div>
+          <button class="selected" onclick="select()">
+            <i class="fas fa-hand-paper fa-3x"></i></i>
+          </button>
 
-          <div>
-            <img src="./imagens/tesoura.png">
-          </div>
+          <button onclick="select()">
+            <i class="fas fa-hand-scissors fa-3x"></i>
+          </button>
         </div>
 
         <div id="vs">vs</div>
           
         <h2>Player 2</h2>
-        <div class="play-options">
-          <div>
-            <img src="./imagens/pedra.png">
-          </div>
+        <div class="play-options player2">
+          <button>
+            <i class="fas fa-hand-rock fa-3x"></i>
+          </button>
 
-          <div class="selected">
-            <img src="./imagens/papel.png">
-          </div>
+          <button class="selected">
+            <i class="fas fa-hand-paper fa-3x"></i></i>
+          </button>
 
-          <div>
-            <img src="./imagens/tesoura.png">
-          </div>
+          <button>
+            <i class="fas fa-hand-scissors fa-3x"></i>
+          </button>
         </div>
         
         <button class="play-button">Jogar!</button>
