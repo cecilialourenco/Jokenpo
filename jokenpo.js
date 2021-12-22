@@ -1,26 +1,40 @@
-const options = document.querySelectorAll(".play-options.player1 button");
+const options = document.querySelectorAll(".play-options button");
+
 for (let o of options) {
   o.addEventListener("click", select);
 }
 
 function select () {
-  console.log("oi");
+  const options = this.parentElement.children;
   for (let o of options) {
     o.classList.remove("selected");
   }
   
-  console.log(this)
   this.classList.add("selected");
 }
 
-// let input = document.querySelector(".input");
-// let button = document.querySelector(".button");
-// button.disabled = true;
-// input.addEventListener("click", select);
-// function stateHandle() {
-//   if (document.querySelector(".input").value === "") {
-//     button.disabled = true; 
-//   } else {
-//     button.disabled = false;
+function winner (optionPlayer1, optionPlayer2) {
+    if(optionPlayer1 === optionPlayer2) {
+      return 0;
+    }
+    if(optionPlayer1 === "rock" && optionPlayer2 === "scissors") {
+      return 1;
+    }
+    if(optionPlayer1 === "rock" && optionPlayer2 === "paper") {
+      return 2;
+    }
+    if(optionPlayer1 === "scissors" && optionPlayer2 === "paper") {
+      return 1;
+    }
+    if(optionPlayer1 === "scissors" && optionPlayer2 === "rock") {
+      return 2;
+    }
+    if(optionPlayer1 === "paper" && optionPlayer2 === "rock") {
+      return 1;
+    }
+    if(optionPlayer1 === "paper" && optionPlayer2 === "scissors") {
+      return 2;
+    }
+}
 //   }
 // }
