@@ -11,42 +11,42 @@ for (let o of options) {
   o.addEventListener("click", select);
 }
 
-function select () {
+function select() {
   const options = this.parentElement.children;
   for (let o of options) {
     o.classList.remove("selected");
   }
-  
+
   this.classList.add("selected");
 }
 
-function winner (optionPlayer1, optionPlayer2) {
-    if(optionPlayer1 === optionPlayer2) {
-      return 0;
-    }
-    if(optionPlayer1 === "rock" && optionPlayer2 === "scissors") {
-      return 1;
-    }
-    if(optionPlayer1 === "rock" && optionPlayer2 === "paper") {
-      return 2;
-    }
-    if(optionPlayer1 === "scissors" && optionPlayer2 === "paper") {
-      return 1;
-    }
-    if(optionPlayer1 === "scissors" && optionPlayer2 === "rock") {
-      return 2;
-    }
-    if(optionPlayer1 === "paper" && optionPlayer2 === "rock") {
-      return 1;
-    }
-    if(optionPlayer1 === "paper" && optionPlayer2 === "scissors") {
-      return 2;
-    }
+function winner(optionPlayer1, optionPlayer2) {
+  if (optionPlayer1 === optionPlayer2) {
+    return 0;
+  }
+  if (
+    (optionPlayer1 === "rock" && optionPlayer2 === "scissors") ||
+    (optionPlayer1 === "scissors" && optionPlayer2 === "paper") ||
+    (optionPlayer1 === "paper" && optionPlayer2 === "rock")
+  ) {
+    return 1;
+  }
+  if (
+    (optionPlayer1 === "rock" && optionPlayer2 === "paper") ||
+    (optionPlayer1 === "scissors" && optionPlayer2 === "rock") ||
+    (optionPlayer1 === "paper" && optionPlayer2 === "scissors")
+  ) {
+    return 2;
+  }
 }
 
-function play () {
-  const optionPlayer1 = document.querySelector(".play-options.player1 .selected");
-  const optionPlayer2 = document.querySelector(".play-options.player2 .selected");
+function play() {
+  const optionPlayer1 = document.querySelector(
+    ".play-options.player1 .selected"
+  );
+  const optionPlayer2 = document.querySelector(
+    ".play-options.player2 .selected"
+  );
   playTransition.classList.remove("hidden");
   playButton.classList.add("hidden");
   results(optionPlayer1, optionPlayer2);
@@ -66,7 +66,7 @@ function play () {
   }, 5000);
 }
 
-function results (optionPlayer1, optionPlayer2) {
+function results(optionPlayer1, optionPlayer2) {
   choicePlayer1.innerHTML = "";
   choicePlayer1.appendChild(optionPlayer1.children[0].cloneNode(true));
 
@@ -75,7 +75,7 @@ function results (optionPlayer1, optionPlayer2) {
 
   const playerWinner = winner(optionPlayer1.name, optionPlayer2.name);
   const message = document.querySelector("#winner-announcement p");
-  
+
   if (playerWinner === 1) {
     choiceWinner.innerHTML = "";
     choiceWinner.appendChild(optionPlayer1.children[0].cloneNode(true));
@@ -89,8 +89,7 @@ function results (optionPlayer1, optionPlayer2) {
   } else {
     choiceWinner.innerHTML = "";
     choiceWinner.appendChild(optionPlayer1.children[0].cloneNode(true));
-    message.textContent = "Empate"
+    message.textContent = "Empate";
     choiceWinner.className = "draw";
   }
 }
-
