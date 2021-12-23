@@ -63,16 +63,19 @@ function play () {
   setTimeout(() => {
     winnerAnnouncement.classList.add("hidden");
     playButton.classList.remove("hidden");
-  }, 4000);
+  }, 5000);
 }
 
 function results (optionPlayer1, optionPlayer2) {
   choicePlayer1.innerHTML = "";
   choicePlayer1.appendChild(optionPlayer1.children[0].cloneNode(true));
+
   choicePlayer2.innerHTML = "";
   choicePlayer2.appendChild(optionPlayer2.children[0].cloneNode(true));
+
   const playerWinner = winner(optionPlayer1.name, optionPlayer2.name);
   const message = document.querySelector("#winner-announcement p");
+  
   if (playerWinner === 1) {
     choiceWinner.innerHTML = "";
     choiceWinner.appendChild(optionPlayer1.children[0].cloneNode(true));
