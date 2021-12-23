@@ -30,16 +30,16 @@
 			<main>
 				<h2>Player 1</h2>
         <div class="play-options player1">
-          <button>
-            <i class="fas fa-hand-rock fa-3x"></i>
+          <button name="rock">
+            <i class="fas fa-hand-rock fa-2x"></i>
           </button>
 
-          <button class="selected">
-            <i class="fas fa-hand-paper fa-3x"></i></i>
+          <button class="selected" name="paper">
+            <i class="fas fa-hand-paper fa-2x"></i></i>
           </button>
 
-          <button>
-            <i class="fas fa-hand-scissors fa-3x"></i>
+          <button name="scissors">
+            <i class="fas fa-hand-peace fa-2x"></i>
           </button>
         </div>
 
@@ -47,20 +47,70 @@
           
         <h2>Player 2</h2>
         <div class="play-options player2">
-          <button>
-            <i class="fas fa-hand-rock fa-3x"></i>
+          <button name="rock">
+            <i class="fas fa-hand-rock fa-2x"></i>
           </button>
 
-          <button class="selected">
-            <i class="fas fa-hand-paper fa-3x"></i></i>
+          <button class="selected" name="paper">
+            <i class="fas fa-hand-paper fa-2x"></i></i>
           </button>
 
-          <button>
-            <i class="fas fa-hand-scissors fa-3x"></i>
+          <button name="scissors">
+            <i class="fas fa-hand-peace fa-2x"></i>
           </button>
         </div>
         
-        <button class="play-button">Jogar!</button>
+        <div class="play-boxes">
+          <div class="bottom-box-background">
+            <button class="bottom-box" onclick="play()" id="play-button">Jogar!</button>
+          </div>
+
+          <div class="bottom-box-background">
+            <button class="bottom-box hidden" id="play-transition">
+              <div class="carousel">
+                <ul>
+                  <li><i class="fas fa-hand-rock fa-2x"></i></li>
+                  <li><i class="fas fa-hand-paper fa-2x"></i></li>
+                  <li><i class="fas fa-hand-peace fa-2x"></i></li>
+                  <li><i class="fas fa-hand-rock fa-2x"></i></li>
+                </ul>
+              </div>
+
+              <div class="verticalLine"></div>
+
+              <div class="carousel">
+                <ul>
+                  <li><i class="fas fa-hand-rock fa-2x"></i></li>
+                  <li><i class="fas fa-hand-paper fa-2x"></i></li>
+                  <li><i class="fas fa-hand-peace fa-2x"></i></li>
+                  <li><i class="fas fa-hand-rock fa-2x"></i></li>
+                </ul>
+              </div>
+            </button>
+          </div>
+
+          <div class="bottom-box-background">
+            <button class="bottom-box hidden" id="play-results">
+              <div id="choice-player1">
+                
+              </div>
+
+              <div class="verticalLine"></div>
+
+              <div id="choice-player2">
+                
+              </div>
+            </button>
+          </div>
+
+          <div class="bottom-box-background">
+            <button class="bottom-box hidden" id="winner-announcement">
+              <div id="choice-winner"></div>
+
+              <p></p>
+            </button>
+          </div>
+        </div>
 			</main>
 
 		</div>
