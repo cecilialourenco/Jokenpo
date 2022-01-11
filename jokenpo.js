@@ -21,20 +21,20 @@ function select() {
 }
 
 function winner(optionPlayer1, optionPlayer2) {
-  if (optionPlayer1 === optionPlayer2) {
+  if (optionPlayer1 == optionPlayer2) {
     return 0;
   }
   if (
-    (optionPlayer1 === "rock" && optionPlayer2 === "scissors") ||
-    (optionPlayer1 === "scissors" && optionPlayer2 === "paper") ||
-    (optionPlayer1 === "paper" && optionPlayer2 === "rock")
+    (optionPlayer1 == "rock" && optionPlayer2 == "scissors") ||
+    (optionPlayer1 == "scissors" && optionPlayer2 == "paper") ||
+    (optionPlayer1 == "paper" && optionPlayer2 == "rock")
   ) {
     return 1;
   }
   if (
-    (optionPlayer1 === "rock" && optionPlayer2 === "paper") ||
-    (optionPlayer1 === "scissors" && optionPlayer2 === "rock") ||
-    (optionPlayer1 === "paper" && optionPlayer2 === "scissors")
+    (optionPlayer1 == "rock" && optionPlayer2 == "paper") ||
+    (optionPlayer1 == "scissors" && optionPlayer2 == "rock") ||
+    (optionPlayer1 == "paper" && optionPlayer2 == "scissors")
   ) {
     return 2;
   }
