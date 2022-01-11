@@ -11,8 +11,14 @@
 		<link rel="stylesheet" href="reset.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="jokenpo.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap">
+		<link rel="stylesheet" href="top.css">
+    <link rel="stylesheet" href="middle.css">
+    <link rel="stylesheet" href="bottom.css">
+    
+    <script src="https://kit.fontawesome.com/219fd49ac9.js" crossorigin="anonymous"></script>
+
+    <script defer src="jokenpo.js"></script>
 	</head>
 
 	<body>
@@ -26,38 +32,88 @@
 
 			<main>
 				<h2>Player 1</h2>
-        <div class="play-options">
-          <div>
-            <img src="./imagens/pedra.png">
-          </div>
+        <div class="play-options player1">
+          <button name="rock">
+            <i class="fas fa-hand-rock fa-2x"></i>
+          </button>
 
-          <div class="selected">
-            <img src="./imagens/papel.png">
-          </div>
+          <button class="selected" name="paper">
+            <i class="fas fa-hand-paper fa-2x"></i></i>
+          </button>
 
-          <div>
-            <img src="./imagens/tesoura.png">
-          </div>
+          <button name="scissors">
+            <i class="fas fa-hand-peace fa-2x"></i>
+          </button>
         </div>
 
         <div id="vs">vs</div>
           
         <h2>Player 2</h2>
-        <div class="play-options">
-          <div>
-            <img src="./imagens/pedra.png">
-          </div>
+        <div class="play-options player2">
+          <button name="rock">
+            <i class="fas fa-hand-rock fa-2x"></i>
+          </button>
 
-          <div class="selected">
-            <img src="./imagens/papel.png">
-          </div>
+          <button class="selected" name="paper">
+            <i class="fas fa-hand-paper fa-2x"></i></i>
+          </button>
 
-          <div>
-            <img src="./imagens/tesoura.png">
-          </div>
+          <button name="scissors">
+            <i class="fas fa-hand-peace fa-2x"></i>
+          </button>
         </div>
         
-        <button class="play-button">Jogar!</button>
+        <div class="play-boxes">
+          <div class="bottom-box-background">
+            <button class="bottom-box" onclick="play()" id="play-button">Jogar!</button>
+          </div>
+
+          <div class="bottom-box-background">
+            <div class="bottom-box hidden" id="play-transition">
+              <div class="carousel">
+                <ul>
+                  <li><i class="fas fa-hand-rock fa-2x"></i></li>
+                  <li><i class="fas fa-hand-paper fa-2x"></i></li>
+                  <li><i class="fas fa-hand-peace fa-2x"></i></li>
+                  <li><i class="fas fa-hand-rock fa-2x"></i></li>
+                </ul>
+              </div>
+
+              <div class="verticalLine"></div>
+
+              <div class="carousel">
+                <ul>
+                  <li><i class="fas fa-hand-rock fa-2x"></i></li>
+                  <li><i class="fas fa-hand-paper fa-2x"></i></li>
+                  <li><i class="fas fa-hand-peace fa-2x"></i></li>
+                  <li><i class="fas fa-hand-rock fa-2x"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-box-background">
+            <div class="bottom-box hidden" id="play-results">
+              <div id="choice-player1">
+                
+              </div>
+
+              <div class="verticalLine"></div>
+
+              <div id="choice-player2">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-box-background">
+            <div class="bottom-box hidden" id="winner-announcement">
+              <div id="choice-winner"></div>
+
+              <p></p>
+            </div>
+          </div>
+        </div>
 			</main>
 
 		</div>
