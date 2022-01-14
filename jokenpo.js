@@ -14,6 +14,7 @@ let gameOver = false;
 const player1ScoreElement = document.getElementById("player1-score");
 const cpuScoreElement = document.getElementById("cpu-score");
 const optionsPlayer1 = document.querySelector(".play-options.player1");
+const playAgain = document.getElementById("play-again");
 
 for (let o of options) {
   o.addEventListener("click", select);
@@ -54,6 +55,8 @@ function playCPU(){
 }
 
 function play() {
+  playAgain.classList.add("hidden");
+  optionsPlayer1.classList.remove("hidden");
   if (gameOver == true){
     placarPlayer1 = 0;
     placarCPU = 0;
@@ -87,7 +90,6 @@ function play() {
   setTimeout(() => {
     winnerAnnouncement.classList.add("hidden");
     playButton.classList.remove("hidden");
-    optionsPlayer1.classList.remove("hidden");
   }, 5000);
 }
 
@@ -141,6 +143,7 @@ function points(winner) {
   if(message) {
     setTimeout(() => {
       finalAnnouncement.textContent = message;
+      playAgain.classList.remove("hidden");
       optionsPlayer1.classList.add("hidden");
     }, 2000);
   }
