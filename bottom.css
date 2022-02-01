@@ -8,7 +8,7 @@
   border-radius: 1rem;
   border: none;
   box-sizing: border-box;
-  margin: 1.625rem 1.875rem;
+  margin: 0.875rem 0.875rem 0.875rem 1.875rem;
   background-color: #000000;
   color: transparent;
   text-shadow: -0.25rem -0.25rem 0.5625rem rgba(255, 255, 255, 0.4);
@@ -97,7 +97,7 @@
 #winner-announcement {
   flex-direction: column;
   color: #888888;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Roboto Condensed;
   font-style: normal;
   font-weight: 700;
@@ -106,12 +106,37 @@
   text-align: center;
 }
 
+#play-again {
+  width: calc(100% - 3.75rem);
+  font-size: 3rem;
+  height: 12.57rem;
+  text-align: center;
+  box-shadow: -0.625rem -0.625rem 1.875rem #ffffff,
+    0.625rem 0.625rem 1.875rem rgba(174, 174, 192, 0.5);
+  border-radius: 1rem;
+  border: none;
+  box-sizing: border-box;
+  margin: 0.875rem 0.875rem 0.875rem 1.875rem;
+  background-color: #000000;
+  color: transparent;
+  text-shadow: -0.25rem -0.25rem 0.5625rem rgba(255, 255, 255, 0.4);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  transition: transform 1ms;
+  transform: translateX(0) scale(1);
+  display: flex;
+  justify-content: space-around;
+  vertical-align: bottom;
+  align-items: center;
+}
+
 .win {
   color: #54ba70;
-  font-size: 45px;
+  font-size: 2.8125rem;
 }
 
 .draw {
   color: #d5d922;
-  font-size: 45px;
+  font-size: 2.8125rem;
 }

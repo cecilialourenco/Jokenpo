@@ -46,15 +46,19 @@
           </button>
         </div>
 
-        <div id="vs">vs</div>
+        <div id="vs">
+          <span id="player1-score"></span>
+          <p>vs</p>
+          <span id="cpu-score"></span>
+        </div>
           
-        <h2>Player 2</h2>
-        <div class="play-options player2">
+        <h2>CPU</h2>
+        <div class="play-options cpu hidden">
           <button name="rock">
             <i class="fas fa-hand-rock fa-2x"></i>
           </button>
 
-          <button class="selected" name="paper">
+          <button name="paper">
             <i class="fas fa-hand-paper fa-2x"></i></i>
           </button>
 
@@ -62,7 +66,9 @@
             <i class="fas fa-hand-peace fa-2x"></i>
           </button>
         </div>
-        
+
+        <div id="final-announcement"></div>
+
         <div class="play-boxes">
           <div class="bottom-box-background">
             <button class="bottom-box" onclick="play()" id="play-button">Jogar!</button>
@@ -100,7 +106,7 @@
 
               <div class="verticalLine"></div>
 
-              <div id="choice-player2">
+              <div id="choice-cpu">
                 
               </div>
             </div>
@@ -109,10 +115,14 @@
           <div class="bottom-box-background">
             <div class="bottom-box hidden" id="winner-announcement">
               <div id="choice-winner"></div>
-
               <p></p>
             </div>
           </div>
+
+          <div class="bottom-box-background">
+            <button class="bottom-box hidden" onclick="play()" id="play-again">Jogar novamente!</button>
+          </div>
+
         </div>
 			</main>
 

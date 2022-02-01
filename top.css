@@ -13,7 +13,8 @@ h1,
 h2,
 span,
 .bottom-box,
-#vs {
+#vs,
+#final-announcement {
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
