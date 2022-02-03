@@ -1,0 +1,84 @@
+.ranking-players {
+  display: inline-flexbox;
+  background: #eeeeee;
+  box-shadow: -0.2995rem -0.2995rem 0.8984rem rgba(255, 255, 255, 0.75),
+    0.2995rem 0.2995rem 0.8984rem rgba(136, 160, 183, 0.5);
+  border-radius: 1rem;
+  margin: 1rem 1.875rem;
+  padding: 0.625rem 1.125rem 0.625rem 1.125rem;
+  height: 4.25rem;
+}
+
+.match {
+  display: flex;
+  background: transparent;
+  margin: 1rem 1.875rem;
+  justify-content: space-between;
+}
+
+.match button{
+  display: flexbox;
+  background: #eeeeee;
+  box-shadow: -0.2995rem -0.2995rem 0.8984rem rgba(255, 255, 255, 0.75),
+    0.2995rem 0.2995rem 0.8984rem rgba(136, 160, 183, 0.5);
+  border-radius: 1rem;
+  border: none;
+  align-items: center;
+  color: #000000;
+  font-size: 1.25rem;
+  height: 3.75rem;
+  width: calc(50% - 0.75rem);
+  text-align: center;
+}
+
+.match .selected{
+  border-radius: 0.8984rem;
+  background: #cdcdcd;
+  box-shadow: inset -0.2995rem -0.2995rem 0.8984rem rgba(255, 255, 255, 0.5),
+    inset 0.2995rem 0.2995rem 0.8984rem rgba(11, 35, 58, 0.15);
+  color: #000000;
+  transition: transform 1ms;
+}
+
+.match button:hover,
+.match button:focus {
+  background: #cdcdcd;
+  box-shadow: inset -0.2995rem -0.2995rem 0.8984rem rgba(255, 255, 255, 0.5),
+    inset 0.2995rem 0.2995rem 0.8984rem rgba(11, 35, 58, 0.15);
+  transition: transform 1ms;
+}
+
+#player-name {
+  display: flex;
+  background: #eeeeee;
+  box-shadow: -0.2995rem -0.2995rem 0.8984rem rgba(255, 255, 255, 0.75),
+    0.2995rem 0.2995rem 0.8984rem rgba(136, 160, 183, 0.5);
+  border-radius: 1rem;
+  border: none;
+  align-items: center;
+  color: #000000;
+  font-size: 1.25rem;
+  height: 3.75rem;
+  width: calc(100% - 3.75rem);
+  margin: 1rem 1.875rem;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+::placeholder {
+  font-family: "Roboto Condensed", sans-serif;
+  color:lightgray;
+}
+
+nav a{
+	text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+  background-color: #000000;
+  color: transparent;
+  text-shadow: -0.25rem -0.25rem 0.5625rem rgba(255, 255, 255, 0.4);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}

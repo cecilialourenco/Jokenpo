@@ -31,7 +31,7 @@
       <hr> 
 
 			<main>
-				<h2>Player 1</h2>
+				<h2 id="player1-label">Player 1</h2>
         <div class="play-options player1">
           <button name="rock">
             <i class="fas fa-hand-rock fa-2x"></i>
@@ -52,7 +52,7 @@
           <span id="cpu-score"></span>
         </div>
           
-        <h2>CPU</h2>
+        <h3>CPU</h3>
         <div class="play-options cpu hidden">
           <button name="rock">
             <i class="fas fa-hand-rock fa-2x"></i>
@@ -67,7 +67,9 @@
           </button>
         </div>
 
-        <div id="final-announcement"></div>
+        <div id="final-announcement" class="hidden">
+          <p></p>
+        </div>
 
         <div class="play-boxes">
           <div class="bottom-box-background">
@@ -120,7 +122,11 @@
           </div>
 
           <div class="bottom-box-background">
-            <button class="bottom-box hidden" onclick="play()" id="play-again">Jogar novamente!</button>
+            <nav>
+              <button class="bottom-box hidden" onclick="play()" id="play-again">
+                <a href="firstScreen.html">Jogar novamente!</a>
+              </button>
+            </nav>
           </div>
 
         </div>

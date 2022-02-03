@@ -11,8 +11,11 @@ body {
 
 h1,
 h2,
+h3,
 span,
 .bottom-box,
+.match button,
+.ranking-players,
 #vs,
 #final-announcement {
   font-family: "Roboto Condensed", sans-serif;
@@ -38,9 +41,26 @@ h2 {
   font-size: 1.25rem;
   line-height: 1.172rem;
   color: #888888;
-  margin: 0.95rem auto;
+  margin: 4.1875rem auto auto;
   text-align: center;
 }
+
+h2.small-margin, 
+h2.ranking, 
+h2.play-mode, 
+h2.name 
+{ 
+  margin-top: 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.172rem;
+  color: #888888;
+  margin: 0.95rem auto 3.75rem;
+  text-align: center;
+}
+
 
 header {
   display: flex;
