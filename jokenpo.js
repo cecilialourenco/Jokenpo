@@ -16,8 +16,12 @@ const cpuScoreElement = document.getElementById("cpu-score");
 const optionsPlayer1 = document.querySelector(".play-options.player1");
 const playAgain = document.getElementById("play-again");
 const player1Label = document.getElementById("player1-label");
-let playerName = "Cecília";
-let numberOfMatches = 5;
+let playerName = localStorage.getItem("name");
+let numberOfMatches = localStorage.getItem("number of matches") || 5;
+let matchesPlayed = 0;
+let ranking = JSON.parse(localStorage.getItem("ranking"));
+
+player1Label.textContent = playerName;
 
 
 for (let o of options) {
@@ -62,6 +66,7 @@ function play() {
   if (gameOver == true){
     placarPlayer1 = 0;
     placarCPU = 0;
+    matchesPlayed = 0;
     updateScore();
     finalAnnouncement.textContent = '';
     gameOver = false;
@@ -108,7 +113,7 @@ function results(optionPlayer1, optionCPU) {
   if (playerWinner == 1) {
     choiceWinner.innerHTML = "";
     choiceWinner.appendChild(optionPlayer1.children[0].cloneNode(true));
-    message.textContent = "Player 1 ganhou";
+    message.textContent = playerName + " ganhou";
     choiceWinner.className = "win";
   } else if (playerWinner == 2) {
     choiceWinner.innerHTML = "";
@@ -126,20 +131,27 @@ function results(optionPlayer1, optionCPU) {
 
 function points(winner) {
   message = false;
+  matchesPlayed += 1;
 
   if(winner === 1) {
      placarPlayer1 += 1;
-    if (placarPlayer1 === 1) {
-      message = "Player 1 venceu";
-      gameOver = true;
-    }
   }
 
   if(winner === 2) {
     placarCPU += 1;
-    if (placarCPU === 1) {
+  }
+
+  if(matchesPlayed == numberOfMatches) {
+    gameOver = true;
+    if (placarPlayer1 > placarCPU) {
+      message = playerName + " venceu";
+      updateRanking();
+    }
+    if (placarCPU > placarPlayer1) {
       message = "CPU venceu";
-      gameOver = true;
+    }
+    if (placarCPU == placarPlayer1) {
+      message = "Empate";
     }
   }
 
@@ -152,6 +164,16 @@ function points(winner) {
       optionsPlayer1.classList.add("hidden");
     }, 2000);
   }
+}
+
+function updateRanking() {
+  if (ranking[playerName]) {
+    ranking[playerName] += 1;
+  } else {
+    ranking[playerName] = 1;
+  }
+
+  localStorage.setItem('ranking', JSON.stringify(ranking));
 }
 
 function updateScore() {

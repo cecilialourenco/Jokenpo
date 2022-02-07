@@ -68,7 +68,7 @@ header {
   align-items: baseline;
 }
 
-span {
+header span {
   font-size: 0.625rem;
   line-height: 0.6rem;
   vertical-align: text-bottom;
