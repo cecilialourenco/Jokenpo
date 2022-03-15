@@ -8,30 +8,30 @@
 
 		<title>Jokenpo</title>
 
-		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="../css/reset.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap">
-		<link rel="stylesheet" href="top.css">
-    <link rel="stylesheet" href="middle.css">
-    <link rel="stylesheet" href="bottom.css">
+		<link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/bottom.css">
     
     <script src="https://kit.fontawesome.com/219fd49ac9.js" crossorigin="anonymous"></script>
 
-    <script defer src="jokenpo.js"></script>
+    <script defer src="../js/jokenpo.js"></script>
 	</head>
 
 	<body>
 		<div class="container">
 			<header>
         <h1>Jokenpo</h1>
-				<span>versão 1.0</span>
+				<span>versão 2.0</span>
 			</header>
 
       <hr> 
 
 			<main>
-				<h2>Player 1</h2>
+				<h2 id="player1-label">Player 1</h2>
         <div class="play-options player1">
           <button name="rock">
             <i class="fas fa-hand-rock fa-2x"></i>
@@ -52,7 +52,7 @@
           <span id="cpu-score"></span>
         </div>
           
-        <h2>CPU</h2>
+        <h3>CPU</h3>
         <div class="play-options cpu hidden">
           <button name="rock">
             <i class="fas fa-hand-rock fa-2x"></i>
@@ -67,7 +67,9 @@
           </button>
         </div>
 
-        <div id="final-announcement"></div>
+        <div id="final-announcement" class="hidden">
+          <p></p>
+        </div>
 
         <div class="play-boxes">
           <div class="bottom-box-background">
@@ -120,7 +122,11 @@
           </div>
 
           <div class="bottom-box-background">
-            <button class="bottom-box hidden" onclick="play()" id="play-again">Jogar novamente!</button>
+            <nav>
+              <button class="bottom-box hidden" onclick="play()" id="play-again">
+                <a href="../js/firstScreen.js">Jogar novamente!</a>
+              </button>
+            </nav>
           </div>
 
         </div>

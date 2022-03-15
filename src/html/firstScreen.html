@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Jokenpo</title>
+
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap">
+		<link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/bottom.css">
+    <link rel="stylesheet" href="../css/firstScreen.css">
+  
+
+    <script src="https://kit.fontawesome.com/219fd49ac9.js" crossorigin="anonymous"></script>
+
+    <script defer src="../js/firstScreen.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+        <h1>Jokenpo</h1>
+				<span>versão 2.0</span>
+			</header>
+
+      <hr> 
+
+			<main>
+        <div>
+          <h2 class="ranking">Ranking<i class="fas fa-trophy"></i></h2>
+            <ul class="ranking-players">
+              <li>1° <span id="ranking-1"></span></li>
+              <li>2° <span id="ranking-2"></span></li>
+              <li>3° <span id="ranking-3"></span></li>
+            </ul>
+        </div>
+
+        <h2 class="play-mode">Escolha o número de partidas</h2>
+        <div class="match">
+          <button id="matches-5" class="selected" onclick="saveNumberOfMatches(5)">5 partidas</button>
+          <button id="matches-10" onclick="saveNumberOfMatches(10)">10 partidas</button>
+        </div>
+
+        <div>
+          <form action="index.html">    
+            <h2 class="name">Digite seu nome</h2>
+            <input id="player-name" type="text" oninput="saveName(this.value)" placeholder="Nome de quem vai jogar" required>
+            <input type="submit" value="Jogar!" class="bottom-box">
+          </form>
+        </div>
+			</main>
+
+		</div>
+	</body>
+</html>
