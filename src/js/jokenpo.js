@@ -129,6 +129,24 @@ function results(optionPlayer1, optionCPU) {
   points(playerWinner);
 }
 
+function win() {
+  fetch("http://localhost:3000/win", {
+    method: "POST",
+  });
+} 
+
+function draw() {
+  fetch("http://localhost:3000/draw", {
+    method: "POST",
+  });
+}
+
+function lose() {
+  fetch("http://localhost:3000/lose", {
+    method: "POST",
+  });
+} 
+
 function points(winner) {
   message = false;
   matchesPlayed += 1;
@@ -145,7 +163,7 @@ function points(winner) {
     gameOver = true;
     if (placarPlayer1 > placarCPU) {
       message = playerName + " venceu";
-      updateRanking();
+      // updateRanking();
     }
     if (placarCPU > placarPlayer1) {
       message = "CPU venceu";
@@ -166,15 +184,15 @@ function points(winner) {
   }
 }
 
-function updateRanking() {
-  if (ranking[playerName]) {
-    ranking[playerName] += 1;
-  } else {
-    ranking[playerName] = 1;
-  }
+// function updateRanking() {
+//   if (ranking[playerName]) {
+//     ranking[playerName] += 1;
+//   } else {
+//     ranking[playerName] = 1;
+//   }
 
-  localStorage.setItem('ranking', JSON.stringify(ranking));
-}
+//   localStorage.setItem('ranking', JSON.stringify(ranking));
+// }
 
 function updateScore() {
   player1ScoreElement.textContent = placarPlayer1;
