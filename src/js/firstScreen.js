@@ -1,5 +1,5 @@
 const matches = document.querySelectorAll(".match button");
-const ranking = JSON.parse(localStorage.getItem('ranking'));
+// const ranking = JSON.parse(localStorage.getItem('ranking'));
 initialLoad();
 
 
@@ -19,15 +19,15 @@ function saveNumberOfMatches(numMatches) {
   localStorage.setItem("number of matches", numMatches);
 }
 
-function sortPlayers(ranking) {
-  let bestPlayers = [];
+// function sortPlayers(ranking) {
+//   let bestPlayers = [];
 
-  for (const [player, victories] of Object.entries(ranking)) {
-    bestPlayers.push([player, victories]);
-  }
+//   for (const [player, victories] of Object.entries(ranking)) {
+//     bestPlayers.push([player, victories]);
+//   }
 
-  return bestPlayers.sort((a, b) => b[1] - a[1]);
-}
+//   return bestPlayers.sort((a, b) => b[1] - a[1]);
+// }
 
 
 function initialLoad() {
@@ -47,16 +47,16 @@ function initialLoad() {
   }
 
   // Load ranking
-  const bestPlayers = sortPlayers(ranking);
-  if (bestPlayers[0]) {
-    document.getElementById('ranking-1').textContent = bestPlayers[0][0] + " - " + bestPlayers[0][1] + " vitórias";
-  }
+  // const bestPlayers = sortPlayers(ranking);
+  // if (bestPlayers[0]) {
+  //   document.getElementById('ranking-1').textContent = bestPlayers[0][0] + " - " + bestPlayers[0][1] + " vitórias";
+  // }
 
-  if (bestPlayers[1]) {
-    document.getElementById('ranking-2').textContent = bestPlayers[1][0] + " - " + bestPlayers[1][1] + " vitórias";
-  }
+  // if (bestPlayers[1]) {
+  //   document.getElementById('ranking-2').textContent = bestPlayers[1][0] + " - " + bestPlayers[1][1] + " vitórias";
+  // }
 
-  if (bestPlayers[2]) {
-    document.getElementById('ranking-3').textContent = bestPlayers[2][0] + " - " + bestPlayers[2][1] + " vitórias";
-  }
+  // if (bestPlayers[2]) {
+  //   document.getElementById('ranking-3').textContent = bestPlayers[2][0] + " - " + bestPlayers[2][1] + " vitórias";
+  // }
 }
