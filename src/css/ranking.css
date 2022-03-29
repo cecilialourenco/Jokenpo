@@ -4,7 +4,7 @@
 
 body{
 	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 header h1{
@@ -31,11 +31,6 @@ header .container:before{
 	margin: 0 auto;
 }
 
-section{
-	margin: 0;
-	/* overflow: hidden; */
-}
-
 section h2{
 	font-size: 1.25em;
 	display: block;
@@ -50,10 +45,11 @@ table{
 }
 
 td, th {
-	/* padding: .7em; */
+	padding: .7em;
 	margin: 0;
-	border: 1px solid #ccc;
+	border: 0.0625rem solid #ccc;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 th{
@@ -71,7 +67,7 @@ label{
 	margin: 0;
 	padding-bottom: 1em;
 	width: 100%;
-	border: 1px solid #ccc;
+	border: 0.0625rem solid #ccc;
 	padding: .7em;
 	width: 100%;
 }
@@ -84,12 +80,7 @@ label{
 .grupo{
 	width: 32%;
 	display: inline-block;
-	padding: 10px 0px;
-}
-
-button:active{
-	margin-top:0px;
-	border: 0;
+	padding: 0.625rem 0rem;
 }
 
 button[disabled=disabled], button:disabled {
