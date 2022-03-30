@@ -96,5 +96,5 @@ nav a{
   font-size: 1.25rem;
   height: 3.75rem;
   margin: 1rem 1.875rem;
-  width: 87%;
+  width: calc(100% - 3.75rem);
 }

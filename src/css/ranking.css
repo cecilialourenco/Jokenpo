@@ -7,47 +7,17 @@ body{
 	font-size: 0.875rem;
 }
 
-header h1{
-	font-size: 3rem;
-	display:inline-block;
-	vertical-align:	middle;
-}
-header h2{
-	font-size: 2rem;
-	display:inline-block;
-	vertical-align:	middle;
-}
-
-header .container:before{
-	content: '';
-	display:inline-block;
-	height: 100%;
-	vertical-align:	middle;
-}
-
-.container{
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-}
-
-section h2{
-	font-size: 1.25em;
-	display: block;
-	padding-bottom: .5em;
-	margin-bottom: .5em;
-}
-
 table{
-	width: 100%;
-	margin-bottom : .5em;
-  table-layout: fixed;
+	width: calc(100% - 2rem);
+	align-items: center;
+	margin: 1rem 1rem;
+  	table-layout: auto;
 }
 
 td, th {
 	padding: .7em;
 	margin: 0;
-	border: 0.0625rem solid #ccc;
+	border: 1px solid #ccc;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -57,33 +27,18 @@ th{
 	background-color: #EEE;
 }
 
-label{
-	color: #555;
-	display: block;
-	margin-bottom: .2em;
-}
-
-.campo{
-	margin: 0;
-	padding-bottom: 1em;
-	width: 100%;
-	border: 0.0625rem solid #ccc;
-	padding: .7em;
-	width: 100%;
-}
-
-.campo-medio{
-	display: inline-block;
-	padding-right: .5em;
-}
-
-.grupo{
-	width: 32%;
-	display: inline-block;
-	padding: 0.625rem 0rem;
-}
-
-button[disabled=disabled], button:disabled {
-  background-color: gray;
-	border-color: darkgray;
+.button-back {
+	display:flex;
+	background: #eee;
+	box-shadow: -0.2995rem -0.2995rem 0.8984rem rgba(255, 255, 255, 0.75),
+		0.2995rem 0.2995rem 0.8984rem rgba(136, 160, 183, 0.5);
+	/* border-radius: .5rem; */
+	border: 1px solid #ccc;
+	align-items: center;
+	color: #000000;
+	font-size: 0.675rem;
+	height: 2rem;
+	margin-left: 1rem;
+	text-align: center;
+	text-transform: uppercase;
 }
