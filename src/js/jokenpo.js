@@ -129,6 +129,42 @@ function results(optionPlayer1, optionCPU) {
   points(playerWinner);
 }
 
+function win() {
+  fetch("http://localhost:3000/win", {
+    method: "POST",
+    body: JSON.stringify({ "user": { "name": playerName }}),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+} 
+
+function draw() {
+  fetch("http://localhost:3000/draw", {
+    method: "POST",
+    body: JSON.stringify({ "user": { "name": playerName }}),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+}
+
+function lose() {
+  fetch("http://localhost:3000/lose", {
+    method: "POST",
+    body: JSON.stringify({ "user": { "name": playerName }}),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+}
+
+function loadRanking() {
+  fetch("http://localhost:3000/users", {
+    method: "GET",
+  });
+}
+
 function points(winner) {
   message = false;
   matchesPlayed += 1;
@@ -145,13 +181,15 @@ function points(winner) {
     gameOver = true;
     if (placarPlayer1 > placarCPU) {
       message = playerName + " venceu";
-      updateRanking();
+      win();
     }
     if (placarCPU > placarPlayer1) {
       message = "CPU venceu";
+      lose();
     }
     if (placarCPU == placarPlayer1) {
       message = "Empate";
+      draw();
     }
   }
 
@@ -166,17 +204,8 @@ function points(winner) {
   }
 }
 
-function updateRanking() {
-  if (ranking[playerName]) {
-    ranking[playerName] += 1;
-  } else {
-    ranking[playerName] = 1;
-  }
-
-  localStorage.setItem('ranking', JSON.stringify(ranking));
-}
-
 function updateScore() {
   player1ScoreElement.textContent = placarPlayer1;
   cpuScoreElement.textContent = placarCPU;
 }
+

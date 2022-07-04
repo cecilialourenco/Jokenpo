@@ -1,0 +1,44 @@
+*{
+	box-sizing: border-box;
+ }
+
+body{
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 0.875rem;
+}
+
+table{
+	width: calc(100% - 2rem);
+	align-items: center;
+	margin: 1rem 1rem;
+  	table-layout: auto;
+}
+
+td, th {
+	padding: .7em;
+	margin: 0;
+	border: 1px solid #ccc;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+th{
+	font-weight: bold;
+	background-color: #EEE;
+}
+
+.button-back {
+	display:flex;
+	background: #eee;
+	box-shadow: -0.2995rem -0.2995rem 0.8984rem rgba(255, 255, 255, 0.75),
+		0.2995rem 0.2995rem 0.8984rem rgba(136, 160, 183, 0.5);
+	/* border-radius: .5rem; */
+	border: 1px solid #ccc;
+	align-items: center;
+	color: #000000;
+	font-size: 0.675rem;
+	height: 2rem;
+	margin-left: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+}

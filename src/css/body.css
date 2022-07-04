@@ -73,11 +73,11 @@
 
 #final-announcement {
   color: #54BA70;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 100%;
   text-align: center;
   vertical-align: top;
-  height: 100px;
-  width: 188px;
-  margin: 50px auto 20px auto;
+  height: 6.25rem;
+  width: 11.75rem;
+  margin: 3.125rem auto 1.25rem auto;
 }
